@@ -248,3 +248,35 @@ body.light .copied-msg {
   border-left: 4px solid orange;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+@media (max-width:700px) {
+  .header h1{
+     font-size: 1.6rem;
+  }
+  .JokeFetcher{
+    width: 90%;
+  }
+  .intro h1{
+    font-size: 1.6rem;
+  }
+  .intro p{
+    max-width: 350px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .JokeFetcher h2{
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width:480px) {
+  .intro h1{
+    font-size: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+  }
+  .JokeFetcher h2{
+    text-align: center;
+  }
+}
