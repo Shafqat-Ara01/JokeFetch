@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  font-family: "Noto Sans", sans-serif;
+}
+body.light {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f7ff 100%);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: hsl(225, 23%, 24%);
+}
+body.light .header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.header h1 {
+  color: orange;
+}
+body.light .header h1 {
+  color: orange;
+}
+
+.header button {
+  padding: 10px;
+  background-color: hsl(226, 11%, 37%);
+  border: none;
+  color: hsl(227, 75%, 14%);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body.light .header button {
+  background-color: #e9e9e9;
+  color: #333;
+}
+.header button:hover {
+  color: hsl(226, 11%, 37%);
+  background-color: hsl(227, 75%, 14%);
+}
+body.light .header button:hover {
+  background-color: orange;
+  color: white;
+}
+.header button:focus {
+  outline: 2px solid orange;
+}
+
+.intro {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h1 {
+  color: hsl(200, 60%, 99%);
+}
+body.light .intro h1 {
+  color: #222;
+}
+.intro .highlight {
+  color: orange;
+}
+body.light .intro .highlight {
+  color: orange;
+}
+.intro p {
+  color: hsl(0, 0%, 93%);
+  max-width: 480px;
+  text-align: center;
+}
+body.light .intro p {
+  color: #444;
+}
+
+.JokeFetcher {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: hsl(225, 23%, 24%);
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+body.light .JokeFetcher {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.JokeFetcher::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff8c00, transparent);
+  filter: blur(1px);
+}
+
+body.light .JokeFetcher::before {
+  background: linear-gradient(90deg, transparent, orange, transparent);
+}
+.JokeFetcher h2 {
+  color: hsl(200, 60%, 99%);
+}
+body.light .JokeFetcher h2 {
+  color: #222;
+}
+.features-section {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.features-section button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.features-section button:focus {
+  outline: 2px solid orange;
+  outline-offset: 2px;
+}
+
+.get-joke {
+  color: hsl(200, 60%, 99%);
+  background: transparent;
+  z-index: 1;
+  position: relative;
+  border: 2px solid orange;
+  overflow: hidden;
+}
+body.light .get-joke {
+  color: #222;
+  border: 2px solid orange;
+}
+.get-joke:hover {
+  color: hsl(227, 75%, 14%);
+}
+
+body.light .get-joke:hover {
+  color: white;
+}
+.get-joke::before {
+  content: "";
+  z-index: -1;
+  background: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease;
+}
+body.light .get-joke::before {
+  background-color: orange;
+}
+.get-joke:hover::before {
+  width: 100%;
+}
+
+.copy-joke {
+  background-color: orange;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+body.light .copy-joke {
+  background-color: orange;
+  color: white;
+}
+.copy-joke:hover {
+  background-color: hsl(25, 100%, 50%);
+}
+body.light .copy-joke:hover {
+  background-color: #ff7b00;
+}
+
+.loading {
+  margin: 20px auto 10px auto;
+  width: 45px;
+  height: 45px;
+  border: 4px solid #ccc;
+  border-top: 4px solid orange;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+body.light .loading {
+  border: 4px solid #ccc;
+  border-top: 4px solid orange;
+}
+@keyframes spin {
+  0% {
+    transform: translate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.joke-body {
+  margin-top: 20px;
+  text-align: center;
+  color: hsl(0, 0%, 78%);
+}
+.copied-msg {
+  position: fixed;
+  top: 100px;
+  right: -100%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: hsl(225, 23%, 24%);
+  max-width: 300px;
+  text-align: center;
+  border-left: 4px solid orange;
+  color: hsl(0, 0%, 93%);
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.5s ease;
+}
+.copied-msg.active {
+  right: 20px;
+}
+body.light .copied-msg {
+  background-color: #ffffff;
+  color: #333;
+  border-left: 4px solid orange;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

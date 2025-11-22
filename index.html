@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JokeFetch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1>JokeFetch</h1>
+      <button class="mode-btn"><i class="fa-solid fa-moon"></i></button>
+    </header>
+    <section class="intro">
+      <h1>
+        Explore <span class="highlight">Jokes</span> From the Funniest APIs
+      </h1>
+      <p>
+        Instantly fetch random humor and copy it directly to your clipboard.
+      </p>
+    </section>
+
+    <main class="JokeFetcher">
+      <h2>
+        <i class="fas fa-quote-left" style="margin-right: 8px"> </i>Your Random
+        Joke Appears Here
+      </h2>
+      <div class="features-section">
+        <button class="get-joke">Get Joke</button>
+        <button class="copy-joke">Copy Joke</button>
+      </div>
+      <div class="loading"></div>
+      <p class="joke-body"></p>
+    </main>
+    <div class="copied-msg">Your Message Is Copied!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
